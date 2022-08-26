@@ -20,13 +20,29 @@ namespace Calculator
         }
         private string divideOperator = '\u00F7'.ToString();
         private int count = 1; //insert or replace number on Screen.text
+        private bool checkValidInput = false;
         private void Num0_Click(object sender, EventArgs e)
         {
-            if (Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "0";
-            else
+            if (count == 1)
             {
                 Screen.Text = "0";
                 count = 0;
+            }
+            else if(Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "0";
+            if (checkValidInput)
+            {
+                Expression.Text = "";
+                Inverse.Enabled = true;
+                Duplicate.Enabled = true;
+                Square.Enabled = true;
+                Divide.Enabled = true;
+                Product.Enabled = true;
+                Minus.Enabled = true;
+                Add.Enabled = true;
+                Dot.Enabled = true;
+                negaPosi.Enabled = true;
+                DivideHundred.Enabled = true;
+                checkValidInput = false;
             }
         }
         private void Num1_Click(object sender, EventArgs e)
@@ -37,7 +53,21 @@ namespace Calculator
                 count = 0;
             }
             else if (Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "1";
-            
+            if (checkValidInput)
+            {
+                Expression.Text = "";
+                Inverse.Enabled = true;
+                Duplicate.Enabled = true;
+                Square.Enabled = true;
+                Divide.Enabled = true;
+                Product.Enabled = true;
+                Minus.Enabled = true;
+                Add.Enabled = true;
+                Dot.Enabled = true;
+                negaPosi.Enabled = true;
+                DivideHundred.Enabled = true;
+                checkValidInput = false;
+            }
         }
 
         private void Num2_Click(object sender, EventArgs e)
@@ -48,8 +78,22 @@ namespace Calculator
                 count = 0;
             }
             else if (Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "2";
-            
-            
+            if (checkValidInput)
+            {
+                Expression.Text = "";
+                Inverse.Enabled = true;
+                Duplicate.Enabled = true;
+                Square.Enabled = true;
+                Divide.Enabled = true;
+                Product.Enabled = true;
+                Minus.Enabled = true;
+                Add.Enabled = true;
+                Dot.Enabled = true;
+                negaPosi.Enabled = true;
+                DivideHundred.Enabled = true;
+                checkValidInput = false;
+            }
+
         }
 
         private void Num3_Click(object sender, EventArgs e)
@@ -60,6 +104,21 @@ namespace Calculator
                 count = 0;
             }
             else if (Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "3";
+            if (checkValidInput)
+            {
+                Expression.Text = "";
+                Inverse.Enabled = true;
+                Duplicate.Enabled = true;
+                Square.Enabled = true;
+                Divide.Enabled = true;
+                Product.Enabled = true;
+                Minus.Enabled = true;
+                Add.Enabled = true;
+                Dot.Enabled = true;
+                negaPosi.Enabled = true;
+                DivideHundred.Enabled = true;
+                checkValidInput = false;
+            }
         }
 
         private void Num4_Click(object sender, EventArgs e)
@@ -70,6 +129,21 @@ namespace Calculator
                 count = 0;
             }
             else if (Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "4";
+            if (checkValidInput)
+            {
+                Expression.Text = "";
+                Inverse.Enabled = true;
+                Duplicate.Enabled = true;
+                Square.Enabled = true;
+                Divide.Enabled = true;
+                Product.Enabled = true;
+                Minus.Enabled = true;
+                Add.Enabled = true;
+                Dot.Enabled = true;
+                negaPosi.Enabled = true;
+                DivideHundred.Enabled = true;
+                checkValidInput = false;
+            }
         }
 
         private void Num5_Click(object sender, EventArgs e)
@@ -80,6 +154,21 @@ namespace Calculator
                 count = 0;
             }
             else if (Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "5";
+            if (checkValidInput)
+            {
+                Expression.Text = "";
+                Inverse.Enabled = true;
+                Duplicate.Enabled = true;
+                Square.Enabled = true;
+                Divide.Enabled = true;
+                Product.Enabled = true;
+                Minus.Enabled = true;
+                Add.Enabled = true;
+                Dot.Enabled = true;
+                negaPosi.Enabled = true;
+                DivideHundred.Enabled = true;
+                checkValidInput = false;
+            }
         }
 
         private void Num6_Click(object sender, EventArgs e)
@@ -90,6 +179,21 @@ namespace Calculator
                 count = 0;
             }
             else if (Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "6";
+            if (checkValidInput)
+            {
+                Expression.Text = "";
+                Inverse.Enabled = true;
+                Duplicate.Enabled = true;
+                Square.Enabled = true;
+                Divide.Enabled = true;
+                Product.Enabled = true;
+                Minus.Enabled = true;
+                Add.Enabled = true;
+                Dot.Enabled = true;
+                negaPosi.Enabled = true;
+                DivideHundred.Enabled = true;
+                checkValidInput = false;
+            }
         }
 
         private void Num7_Click(object sender, EventArgs e)
@@ -100,6 +204,21 @@ namespace Calculator
                 count = 0;
             }
             else if (Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "7";
+            if (checkValidInput)
+            {
+                Expression.Text = "";
+                Inverse.Enabled = true;
+                Duplicate.Enabled = true;
+                Square.Enabled = true;
+                Divide.Enabled = true;
+                Product.Enabled = true;
+                Minus.Enabled = true;
+                Add.Enabled = true;
+                Dot.Enabled = true;
+                negaPosi.Enabled = true;
+                DivideHundred.Enabled = true;
+                checkValidInput = false;
+            }
         }
 
         private void Num8_Click(object sender, EventArgs e)
@@ -110,6 +229,21 @@ namespace Calculator
                 count = 0;
             }
             else if (Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "8";
+            if (checkValidInput)
+            {
+                Expression.Text = "";
+                Inverse.Enabled = true;
+                Duplicate.Enabled = true;
+                Square.Enabled = true;
+                Divide.Enabled = true;
+                Product.Enabled = true;
+                Minus.Enabled = true;
+                Add.Enabled = true;
+                Dot.Enabled = true;
+                negaPosi.Enabled = true;
+                DivideHundred.Enabled = true;
+                checkValidInput = false;
+            }
         }
 
         private void Num9_Click(object sender, EventArgs e)
@@ -120,6 +254,21 @@ namespace Calculator
                 count = 0;
             }
             else if (Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "9";
+            if (checkValidInput)
+            {
+                Expression.Text = "";
+                Inverse.Enabled = true;
+                Duplicate.Enabled = true;
+                Square.Enabled = true;
+                Divide.Enabled = true;
+                Product.Enabled = true;
+                Minus.Enabled = true;
+                Add.Enabled = true;
+                Dot.Enabled = true;
+                negaPosi.Enabled = true;
+                DivideHundred.Enabled = true;
+                checkValidInput = false;
+            }
         }
         private bool checkAddition = false;
         private bool checkSubtraction = false;
@@ -127,7 +276,23 @@ namespace Calculator
         private bool checkDivision = false;
         private void Result_Click(object sender, EventArgs e)
         {
-            if (Expression.Text.Contains("="))
+            if (Screen.Text.Equals("Invalid Input"))
+            {
+                Expression.Text = "";
+                Screen.Text = "0";
+                Inverse.Enabled = true;
+                Duplicate.Enabled = true;
+                Square.Enabled = true;
+                Divide.Enabled = true;
+                Product.Enabled = true;
+                Minus.Enabled = true;
+                Add.Enabled = true;
+                Dot.Enabled = true;
+                negaPosi.Enabled = true;
+                DivideHundred.Enabled = true;
+                checkValidInput = false;
+            }
+            else if (Expression.Text.Contains("="))
             {
                 double number1 = Convert.ToDouble(Screen.Text);
                 double number2 = Convert.ToDouble(Expression.Text.Split(' ')[2]);
@@ -181,19 +346,31 @@ namespace Calculator
             {
                 double number1 = Convert.ToDouble(Screen.Text);
                 double number2 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
-                Screen.Text = (number2 / number1).ToString();
+                if (number1 != 0) Screen.Text = (number2 / number1).ToString();
+                else
+                {
+                    Screen.Text = "Invalid Input";
+                    Inverse.Enabled = false;
+                    Duplicate.Enabled = false;
+                    Square.Enabled = false;
+                    Divide.Enabled = false;
+                    Product.Enabled = false;
+                    Minus.Enabled = false;
+                    Add.Enabled = false;
+                    Dot.Enabled = false;
+                    negaPosi.Enabled = false;
+                    DivideHundred.Enabled = false;
+                    checkValidInput = true;
+                }
                 Expression.Text += (" " + number1.ToString() + " =");
                 checkMultiplication = false;
-            }
-            else if(Screen.Text.Equals("Invalid Input"))
-            {
-                Screen.Text = "0";
             }
             else
             {
                 Expression.Text = Screen.Text + " =";
             }
             count = 1;
+            hundredReplay = 0;
         }
         
         private void Add_Click(object sender, EventArgs e)
@@ -226,12 +403,28 @@ namespace Calculator
                 checkDivision = false;
                 number1 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
                 number2 = Convert.ToDouble(Screen.Text);
-                Expression.Text = (number2 / number1).ToString() + " +";
+                if(number1 != 0) Expression.Text = (number2 / number1).ToString() + " +";
+                else
+                {
+                    Screen.Text = "Invalid Input";
+                    Inverse.Enabled = false;
+                    Duplicate.Enabled = false;
+                    Square.Enabled = false;
+                    Divide.Enabled = false;
+                    Product.Enabled = false;
+                    Minus.Enabled = false;
+                    Add.Enabled = false;
+                    Dot.Enabled = false;
+                    negaPosi.Enabled = false;
+                    DivideHundred.Enabled = false;
+                    checkValidInput = true;
+                }
             }
             else
             {
                 Expression.Text = Screen.Text + " +";
             }
+            hundredReplay = 0;
             count = 1;
         }
 
@@ -265,12 +458,28 @@ namespace Calculator
                 checkDivision = false;
                 number1 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
                 number2 = Convert.ToDouble(Screen.Text);
-                Expression.Text = (number2 / number1).ToString() + " -"; 
+                if(number1 != 0) Expression.Text = (number2 / number1).ToString() + " -";
+                else
+                {
+                    Screen.Text = "Invalid Input";
+                    Inverse.Enabled = false;
+                    Duplicate.Enabled = false;
+                    Square.Enabled = false;
+                    Divide.Enabled = false;
+                    Product.Enabled = false;
+                    Minus.Enabled = false;
+                    Add.Enabled = false;
+                    Dot.Enabled = false;
+                    negaPosi.Enabled = false;
+                    DivideHundred.Enabled = false;
+                    checkValidInput = true;
+                }
             }
             else
             {
                 Expression.Text = Screen.Text + " -";
             }
+            hundredReplay = 0;
             count = 1;
         }
 
@@ -304,12 +513,28 @@ namespace Calculator
                 checkDivision = false;
                 number1 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
                 number2 = Convert.ToDouble(Screen.Text);
-                Expression.Text = (number2 / number1).ToString() + " *";
+                if(number1 != 0) Expression.Text = (number2 / number1).ToString() + " *";
+                else
+                {
+                    Screen.Text = "Invalid Input";
+                    Inverse.Enabled = false;
+                    Duplicate.Enabled = false;
+                    Square.Enabled = false;
+                    Divide.Enabled = false;
+                    Product.Enabled = false;
+                    Minus.Enabled = false;
+                    Add.Enabled = false;
+                    Dot.Enabled = false;
+                    negaPosi.Enabled = false;
+                    DivideHundred.Enabled = false;
+                    checkValidInput = true;
+                }
             }
             else
             {
                 Expression.Text = Screen.Text + " *";
             }
+            hundredReplay = 0;
             count = 1;
         }
 
@@ -343,12 +568,28 @@ namespace Calculator
             {
                 number1 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
                 number2 = Convert.ToDouble(Screen.Text);
-                Expression.Text = (number2 / number1).ToString() + " " + divideOperator;
+                if(number1 != 0) Expression.Text = (number2 / number1).ToString() + " " + divideOperator;
+                else
+                {
+                    Screen.Text = "Invalid Input";
+                    Inverse.Enabled = false;
+                    Duplicate.Enabled = false;
+                    Square.Enabled = false;
+                    Divide.Enabled = false;
+                    Product.Enabled = false;
+                    Minus.Enabled = false;
+                    Add.Enabled = false;
+                    Dot.Enabled = false;
+                    negaPosi.Enabled = false;
+                    DivideHundred.Enabled = false;
+                    checkValidInput = true;
+                }
             }
             else
             {
                 Expression.Text = Screen.Text + " " +divideOperator;
             }
+            hundredReplay = 0;
             count = 1;
         }
 
@@ -374,7 +615,23 @@ namespace Calculator
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            if(Screen.Text != "0" && Screen.Text.Length > 1)
+            if (checkValidInput)
+            {
+                Screen.Text = "0";
+                Expression.Text = "";
+                Inverse.Enabled = true;
+                Duplicate.Enabled = true;
+                Square.Enabled = true;
+                Divide.Enabled = true;
+                Product.Enabled = true;
+                Minus.Enabled = true;
+                Add.Enabled = true;
+                Dot.Enabled = true;
+                negaPosi.Enabled = true;
+                DivideHundred.Enabled = true;
+                checkValidInput = false;
+            }
+            else if (Screen.Text != "0" && Screen.Text.Length > 1)
             {
                 Screen.Text = Screen.Text.Substring(0,Screen.Text.Length - 1);
             }
@@ -383,18 +640,21 @@ namespace Calculator
                 Screen.Text = "0";
                 count = 1;
             }
+            hundredReplay = 0;
         }
 
         private void Clear_Click(object sender, EventArgs e)
         {
             Screen.Text = "0";
             Expression.Text = "";
+            hundredReplay = 0;
             count = 1;
         }
 
         private void ClearScreen_Click(object sender, EventArgs e)
         {
             Screen.Text = "0";
+            hundredReplay = 0;
             count = 1;
         }
 
@@ -414,8 +674,19 @@ namespace Calculator
             {
                 Expression.Text = "";
                 Screen.Text = "Invalid Input";
+                Inverse.Enabled = false;
+                Duplicate.Enabled = false;
+                Square.Enabled = false;
+                Divide.Enabled = false;
+                Product.Enabled = false;
+                Minus.Enabled = false;
+                Add.Enabled = false;
+                Dot.Enabled = false;
+                negaPosi.Enabled = false;
+                DivideHundred.Enabled = false;
             }
             count = 1;
+            hundredReplay = 0;
         }
 
         private void Duplicate_Click(object sender, EventArgs e)
@@ -431,6 +702,7 @@ namespace Calculator
             }
             Screen.Text = (number1 * number1).ToString();
             count = 1;
+            hundredReplay = 0;
         }
 
         private void Square_Click(object sender, EventArgs e)
@@ -449,13 +721,75 @@ namespace Calculator
             {
                 Expression.Text = "";
                 Screen.Text = "Invalid Input";
+                Inverse.Enabled = false;
+                Duplicate.Enabled = false;
+                Square.Enabled = false;
+                Divide.Enabled = false;
+                Product.Enabled = false;
+                Minus.Enabled = false;
+                Add.Enabled = false;
+                Dot.Enabled = false;
+                negaPosi.Enabled = false;
+                DivideHundred.Enabled = false;
             }
             count = 1;
+            hundredReplay = 0;
         }
-
+        private double hundredReplay;
         private void DivideHundred_Click(object sender, EventArgs e)
         {
+            if(Expression.Text.Contains("="))
+            {
+                Screen.Text =Math.Abs((Convert.ToDouble(Screen.Text) / 100) * (Convert.ToDouble(Screen.Text))).ToString();
+                Expression.Text = Screen.Text;
+                hundredReplay = Math.Abs((Convert.ToDouble(Screen.Text) / 100));
+            }
+            else if(Expression.Text.Contains("+") || Expression.Text.Contains("-") || Expression.Text.Contains("*") || Expression.Text.Contains(divideOperator))
+            {
+                double number = Convert.ToDouble(Expression.Text.Split(' ')[0]);
+                string Operator = Expression.Text.Split(' ')[1];
+                if (count == 1)
+                {
+                    if (Expression.Text.Split(' ').Length < 3)
+                    {
+                        Screen.Text = (number * number/ 100).ToString();
+                        Expression.Text = number.ToString() + " " + Operator +" " + (number * number / 100).ToString();
+                    }
+                    else
+                    {
+                        Screen.Text = (Convert.ToDouble(Expression.Text.Split(' ')[2]) * number / 100).ToString();
+                        Expression.Text = number + " " + Operator + " " + Screen.Text;
+                    }
+                }
+                else
+                {
+                    Screen.Text = (Convert.ToDouble(Screen.Text) * number / 100).ToString();
+                    Expression.Text = number + " " + Operator + " " + Screen.Text;
+                    count = 1;
+                }
+            }
+            else if(Screen.Text != "0" && Screen.Text.Equals(Expression.Text))
+            {
+                Screen.Text = (Convert.ToDouble(Screen.Text) * hundredReplay).ToString();
+                Expression.Text = Screen.Text;
+            }
+            else
+            {
+                Screen.Text = "0";
+                Expression.Text = "0";
+            }
+        }
 
+        private void negaPosi_Click(object sender, EventArgs e)
+        {
+            if(Screen.Text.Contains("-"))
+            {
+                Screen.Text = Screen.Text.Remove(0,1);
+            }
+            else
+            {
+                Screen.Text = "-" + Screen.Text;
+            }
         }
     }
 }
