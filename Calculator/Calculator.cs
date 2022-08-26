@@ -18,7 +18,7 @@ namespace Calculator
         {
             InitializeComponent();
         }
-
+        private string divideOperator = '\u00F7'.ToString();
         private int count = 1; //insert or replace number on Screen.text
         private void Num0_Click(object sender, EventArgs e)
         {
@@ -99,7 +99,7 @@ namespace Calculator
                 Screen.Text = "7";
                 count = 0;
             }
-            if (Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "7";
+            else if (Screen.Text != "0" && !Expression.Text.Contains("-") && !Expression.Text.Contains("+") && !Expression.Text.Contains("x") || count != 1) Screen.Text += "7";
         }
 
         private void Num8_Click(object sender, EventArgs e)
@@ -127,7 +127,33 @@ namespace Calculator
         private bool checkDivision = false;
         private void Result_Click(object sender, EventArgs e)
         {
-            if (checkAddition)
+            if (Expression.Text.Contains("="))
+            {
+                double number1 = Convert.ToDouble(Screen.Text);
+                double number2 = Convert.ToDouble(Expression.Text.Split(' ')[2]);
+                string Operator = Expression.Text.Split(' ')[1];
+                if (Operator.Equals("+"))
+                {
+                    Screen.Text = (number1 + number2).ToString();
+                    Expression.Text = number1.ToString() + " + " + number2.ToString() + " =";
+                }
+                else if (Operator.Equals("-"))
+                {
+                    Screen.Text = (number1 - number2).ToString();
+                    Expression.Text = number1.ToString() + " - " + number2.ToString() + " =";
+                }
+                else if (Operator.Equals("*"))
+                {
+                    Screen.Text = (number1 * number2).ToString();
+                    Expression.Text = number1.ToString() + " * " + number2.ToString() + " =";
+                }
+                else if (Operator.Equals(divideOperator))
+                {
+                    Screen.Text = (number1 / number2).ToString();
+                    Expression.Text = number1.ToString() + $" {divideOperator} " + number2.ToString() + " =";
+                }
+            }
+            else if (checkAddition)
             {
                 double number1 = Convert.ToDouble(Screen.Text);
                 double number2 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
@@ -155,7 +181,7 @@ namespace Calculator
             {
                 double number1 = Convert.ToDouble(Screen.Text);
                 double number2 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
-                Screen.Text = (number1 / number2).ToString();
+                Screen.Text = (number2 / number1).ToString();
                 Expression.Text += (" " + number1.ToString() + " =");
                 checkMultiplication = false;
             }
@@ -186,7 +212,7 @@ namespace Calculator
                 checkSubtraction = false;
                 number1 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
                 number2 = Convert.ToDouble(Screen.Text);
-                Expression.Text = (number1 - number2).ToString() + " +";
+                Expression.Text = (number2 - number1).ToString() + " +";
             }
             else if (Expression.Text.Contains("*") && !Expression.Text.Contains("="))
             {
@@ -195,12 +221,12 @@ namespace Calculator
                 number2 = Convert.ToDouble(Screen.Text);
                 Expression.Text = (number1 * number2).ToString() + " +";
             }
-            else if (Expression.Text.Contains("/") && !Expression.Text.Contains("=")) // chua xong dau
+            else if (Expression.Text.Contains(divideOperator) && !Expression.Text.Contains("="))
             {
                 checkDivision = false;
                 number1 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
                 number2 = Convert.ToDouble(Screen.Text);
-                Expression.Text = (number1 / number2).ToString() + " +";
+                Expression.Text = (number2 / number1).ToString() + " +";
             }
             else
             {
@@ -225,7 +251,7 @@ namespace Calculator
             {
                 number1 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
                 number2 = Convert.ToDouble(Screen.Text);
-                Expression.Text = (number1 - number2).ToString() + " -";
+                Expression.Text = (number2 - number1).ToString() + " -";
             }
             else if (Expression.Text.Contains("*") && !Expression.Text.Contains("="))
             {
@@ -234,12 +260,12 @@ namespace Calculator
                 number2 = Convert.ToDouble(Screen.Text);
                 Expression.Text = (number1 * number2).ToString() + " -";
             }
-            else if (Expression.Text.Contains("/") && !Expression.Text.Contains("=")) // chua xong dau
+            else if (Expression.Text.Contains(divideOperator) && !Expression.Text.Contains("="))
             {
                 checkDivision = false;
                 number1 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
                 number2 = Convert.ToDouble(Screen.Text);
-                Expression.Text = (number1 / number2).ToString() + " -"; 
+                Expression.Text = (number2 / number1).ToString() + " -"; 
             }
             else
             {
@@ -265,7 +291,7 @@ namespace Calculator
                 checkSubtraction = false;
                 number1 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
                 number2 = Convert.ToDouble(Screen.Text);
-                Expression.Text = (number1 - number2).ToString() + " *";
+                Expression.Text = (number2 - number1).ToString() + " *";
             }
             else if (Expression.Text.Contains("*") && !Expression.Text.Contains("="))
             {
@@ -273,12 +299,12 @@ namespace Calculator
                 number2 = Convert.ToDouble(Screen.Text);
                 Expression.Text = (number1 * number2).ToString() + " *";
             }
-            else if (Expression.Text.Contains("/") && !Expression.Text.Contains("=")) // chua xong dau
+            else if (Expression.Text.Contains(divideOperator) && !Expression.Text.Contains("="))
             {
                 checkDivision = false;
                 number1 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
                 number2 = Convert.ToDouble(Screen.Text);
-                Expression.Text = (number1 / number2).ToString() + " *";
+                Expression.Text = (number2 / number1).ToString() + " *";
             }
             else
             {
@@ -304,7 +330,7 @@ namespace Calculator
                 checkSubtraction = false;
                 number1 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
                 number2 = Convert.ToDouble(Screen.Text);
-                Expression.Text = (number1 - number2).ToString() + " /";
+                Expression.Text = (number2 - number1).ToString() + " /";
             }
             else if (Expression.Text.Contains("*") && !Expression.Text.Contains("="))
             {
@@ -313,15 +339,15 @@ namespace Calculator
                 number2 = Convert.ToDouble(Screen.Text);
                 Expression.Text = (number1 * number2).ToString() + " /";
             }
-            else if (Expression.Text.Contains("/") && !Expression.Text.Contains("=")) // chua xong dau
+            else if (Expression.Text.Contains(divideOperator) && !Expression.Text.Contains("="))
             {
                 number1 = Convert.ToDouble(Expression.Text.Split(' ')[0]);
                 number2 = Convert.ToDouble(Screen.Text);
-                Expression.Text = (number1 / number2).ToString() + " /"; // chua xong 
+                Expression.Text = (number2 / number1).ToString() + " " + divideOperator;
             }
-            else//chuaxong dau
+            else
             {
-                Expression.Text = Screen.Text + " /";//chua xong
+                Expression.Text = Screen.Text + " " +divideOperator;
             }
             count = 1;
         }
